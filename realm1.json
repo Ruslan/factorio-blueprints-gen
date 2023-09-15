@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "name": "[item=se-beryllium-ingot]",
+      "stack_size": 100,
+      "train_capacity": 1.0,
+      "trains_store": 2.5
+    }
+  ]
+}

@@ -1,18 +1,21 @@
 class StationProvider < BlueprintGenerator
-  def initialize
-    super
+  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack')
+    super()
 
-    @item_name = "[virtual-signal=signal-info]"
-    @belts_type = 'express'
-    @stack_size = 50
-    @train_capacity = 1.0
+    @belts_type = belts_type
+    @inserter_type = inserter_type
 
-    @train_limit = 2
+    @item = item
+    @item_name = item.name || "[virtual-signal=signal-info]"
+    @stack_size = item.stack_size
+    @train_capacity = item.train_capacity
+    @trains_store = item.trains_store
+
+    @train_limit = train_limit
   end
 
-  attr_accessor :belts_type, :inserter_type, :item_name, :stack_size, :train_capacity, :train_limit
-
   def call
+    build_icons
     super
     setup_belts
     setup_inserters
@@ -58,7 +61,7 @@ class StationProvider < BlueprintGenerator
       when 'arithmetic-combinator'
         case comb.dig('control_behavior', 'arithmetic_conditions', 'output_signal', 'name')
         when 'signal-D'
-          comb['control_behavior']['arithmetic_conditions']['second_constant'] = (@stack_size * 40 * 4 * @train_capacity).ceil
+          comb['control_behavior']['arithmetic_conditions']['second_constant'] = train_items_count
         end
       end
       comb
@@ -72,7 +75,19 @@ class StationProvider < BlueprintGenerator
     end
   end
 
+  def build_icons
+    @icons = ['[item=train-stop]', @item_name, '[item=logistic-chest-passive-provider]']
+  end
+
   def template_name
     'station_provider'
+  end
+
+  def train_items_count
+    (@stack_size * 40 * 4 * @train_capacity).ceil
+  end
+
+  def station_items_count
+    (@stack_size * 48 * 6 * 4).ceil
   end
 end

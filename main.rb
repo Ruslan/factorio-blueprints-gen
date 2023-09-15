@@ -2,19 +2,20 @@ require 'base64'
 require 'json'
 require 'zlib'
 
+require './lib/item.rb'
+require './lib/items.rb'
 require './lib/blueprint_generator.rb'
 require './lib/station_provider.rb'
 require './lib/station_requester.rb'
 
+item = Items.new("realm1.json").find("[item=se-beryllium-ingot]")
 
-
-gen = StationProvider.new
-gen.stack_size = 100
-gen.item_name = "[item=se-beryllium-ingot]"
+gen = StationProvider.new(item)
 gen.call
+puts "\n\n===PROVIDER===\n\n"
 puts gen.blueprint
 
-
-# blueprint_json = JSON.parse(File.read('templates/station_provider.json'))
-
-# puts '0' + Base64.encode64(Zlib::Deflate.deflate(blueprint_json.to_json))
+gen = StationRequester.new(item)
+gen.call
+puts "\n\n===REQUESTER===\n\n"
+puts gen.blueprint
