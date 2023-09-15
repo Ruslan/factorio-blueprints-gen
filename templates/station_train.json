@@ -1,0 +1,111 @@
+{
+  "blueprint": {
+    "icons": [
+      {
+        "signal": {
+          "type": "item",
+          "name": "rail"
+        },
+        "index": 1
+      },
+      {
+        "signal": {
+          "type": "item",
+          "name": "cargo-wagon"
+        },
+        "index": 2
+      }
+    ],
+    "entities": [
+      {
+        "entity_number": 1,
+        "name": "cargo-wagon",
+        "position": {
+          "x": 87,
+          "y": -1026.125
+        },
+        "orientation": 0.5,
+        "inventory": null
+      },
+      {
+        "entity_number": 2,
+        "name": "cargo-wagon",
+        "position": {
+          "x": 87,
+          "y": -1019.125
+        },
+        "orientation": 0.5,
+        "inventory": null
+      },
+      {
+        "entity_number": 3,
+        "name": "cargo-wagon",
+        "position": {
+          "x": 87,
+          "y": -1012.125
+        },
+        "orientation": 0.5,
+        "inventory": null
+      },
+      {
+        "entity_number": 4,
+        "name": "cargo-wagon",
+        "position": {
+          "x": 87,
+          "y": -1005.125
+        },
+        "orientation": 0.5,
+        "inventory": null
+      },
+      {
+        "entity_number": 5,
+        "name": "locomotive",
+        "position": {
+          "x": 87,
+          "y": -998.125
+        },
+        "orientation": 0.5,
+        "items": {
+          "nuclear-fuel": 3
+        }
+      }
+    ],
+    "schedules": [
+      {
+        "locomotives": [
+          5
+        ],
+        "schedule": [
+          {
+            "station": "[item=se-beryllium-ingot][item=logistic-chest-passive-provider]",
+            "wait_conditions": [
+              {
+                "compare_type": "or",
+                "type": "item_count",
+                "condition": {
+                  "first_signal": {
+                    "type": "item",
+                    "name": "se-beryllium-ingot"
+                  },
+                  "constant": 100,
+                  "comparator": ">="
+                }
+              }
+            ]
+          },
+          {
+            "station": "[item=se-beryllium-ingot][item=logistic-chest-requester]",
+            "wait_conditions": [
+              {
+                "compare_type": "or",
+                "type": "empty"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "item": "blueprint",
+    "version": 281479277379584
+  }
+}

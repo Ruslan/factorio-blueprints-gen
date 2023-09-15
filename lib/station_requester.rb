@@ -21,13 +21,13 @@ class StationRequester < StationProvider
 
   def setup_stop
     copy_entities(names: %w(train-stop)) do |stop|
-      stop['station'] = "#{@item_name}[item=logistic-chest-requester]"
+      stop['station'] = "[item=#{@item_name}][item=logistic-chest-requester]"
       stop
     end
   end
 
   def build_icons
-    @icons = ['[item=train-stop]', @item_name, '[item=logistic-chest-requester]']
+    @icons = ['[item=train-stop]', "[item=#{@item_name}]", '[item=logistic-chest-requester]']
   end
 
   def template_name

@@ -6,7 +6,7 @@ class StationProvider < BlueprintGenerator
     @inserter_type = inserter_type
 
     @item = item
-    @item_name = item.name || "[virtual-signal=signal-info]"
+    @item_name = item.name
     @stack_size = item.stack_size
     @train_capacity = item.train_capacity
     @trains_store = item.trains_store
@@ -70,13 +70,13 @@ class StationProvider < BlueprintGenerator
 
   def setup_stop
     copy_entities(names: %w(train-stop)) do |stop|
-      stop['station'] = "#{@item_name}[item=logistic-chest-passive-provider]"
+      stop['station'] = "[item=#{@item_name}][item=logistic-chest-passive-provider]"
       stop
     end
   end
 
   def build_icons
-    @icons = ['[item=train-stop]', @item_name, '[item=logistic-chest-passive-provider]']
+    @icons = ['[item=train-stop]', "[item=#{@item_name}]", '[item=logistic-chest-passive-provider]']
   end
 
   def template_name

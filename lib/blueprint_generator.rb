@@ -24,11 +24,12 @@ class BlueprintGenerator
   end
 
   def setup_icons
-    @result['icons'] = @icons.map.with_index do |item, index|
+    @result['icons'] = @icons.map.with_index do |item_code, index|
+      type, name = item_code.gsub(/[\[\]]/, '').split('=')
       {
         signal: {
-          type: :item,
-          name: item
+          type: type,
+          name: name
         },
         index: index + 1
       }
