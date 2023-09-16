@@ -9,3 +9,14 @@ items:
     stack_size: 50
   se-iron-ingot:
     stack_size: 50
+  battery:
+    stack_size: 200
+  glass:
+    stack_size: 100
+  iron-plate:
+    stack_size: 100
+  advanced-circuit:
+    stack_size: 200
+    train_capacity: 0.125
+  rocket-control-unit:
+    stack_size: 10

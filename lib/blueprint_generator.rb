@@ -10,7 +10,7 @@ class BlueprintGenerator
 
   def blueprint_json
     {
-      blueprint: @result
+      'blueprint' => @result
     }
   end
 
@@ -26,11 +26,11 @@ class BlueprintGenerator
     @result['icons'] = @icons.map.with_index do |item_code, index|
       type, name = item_code.gsub(/[\[\]]/, '').split('=')
       {
-        signal: {
-          type: type,
-          name: name
+        'signal' => {
+          'type' => type,
+          'name' => name
         },
-        index: index + 1
+        'index' => index + 1
       }
     end
   end

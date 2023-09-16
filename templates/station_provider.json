@@ -1,7 +1,7 @@
 {
   "blueprint": {
     "snap-to-grid": {
-      "x": 10,
+      "x": 2,
       "y": 42
     },
     "absolute-snapping": true,
