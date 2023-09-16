@@ -1,0 +1,104 @@
+[
+  {
+    "entity_number": 4002,
+    "name": "decider-combinator",
+    "position": {
+      "x": <%= stop['position']['x'] - 1.5 %>,
+      "y": <%= stop['position']['y'] %>
+    },
+    "direction": 4,
+    "control_behavior": {
+      "decider_conditions": {
+        "first_signal": {
+          "type": "virtual",
+          "name": "signal-each"
+        },
+        "constant": 0,
+        "comparator": ">",
+        "output_signal": {
+          "type": "virtual",
+          "name": "signal-each"
+        },
+        "copy_count_from_input": true
+      }
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": 4003,
+            "circuit_id": 2
+          }
+        ]
+      },
+      "2": {
+        "green": [
+          {
+            "entity_id": 4005
+          }
+        ]
+      }
+    }
+  },
+  {
+    "entity_number": 4003,
+    "name": "arithmetic-combinator",
+    "position": {
+      "x": <%= stop['position']['x'] - 2.5 %>,
+      "y": <%= stop['position']['y'] %>
+    },
+    "direction": 4,
+    "control_behavior": {
+      "arithmetic_conditions": {
+        "first_signal": {
+          "type": "virtual",
+          "name": "signal-each"
+        },
+        "second_constant": <%= limit %>,
+        "operation": "-",
+        "output_signal": {
+          "type": "virtual",
+          "name": "signal-each"
+        }
+      }
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": <%= lowest_pole['entity_number'] %>
+          }
+        ]
+      },
+      "2": {
+        "green": [
+          {
+            "entity_id": 4002,
+            "circuit_id": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "entity_number": 4005,
+    "name": "medium-electric-pole",
+    "position": {
+      "x": <%= stop['position']['x'] + 4.5 %>,
+      "y": <%= stop['position']['y'] + 2.5 %>
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": 4002,
+            "circuit_id": 2
+          }
+        ]
+      }
+    },
+    "neighbours": [
+      <%= lowest_pole['entity_number'] %>
+    ]
+  }
+]

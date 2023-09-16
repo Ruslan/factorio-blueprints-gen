@@ -1,3 +1,5 @@
+require 'erb'
+
 class BlueprintGenerator
   def initialize
     @result = {

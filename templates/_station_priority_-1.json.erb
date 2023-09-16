@@ -1,0 +1,102 @@
+[
+  {
+    "entity_number": 4001,
+    "name": "arithmetic-combinator",
+    "position": {
+      "x": <%= stop['position']['x'] - 1.5 %>,
+      "y": <%= stop['position']['y'] %>
+    },
+    "direction": 4,
+    "control_behavior": {
+      "arithmetic_conditions": {
+        "first_signal": {
+          "type": "virtual",
+          "name": "signal-M"
+        },
+        "second_constant": -20,
+        "operation": "*",
+        "output_signal": {
+          "type": "virtual",
+          "name": "signal-M"
+        }
+      }
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": 4002,
+            "circuit_id": 2
+          }
+        ]
+      },
+      "2": {
+        "green": [
+          {
+            "entity_id": <%= decider['entity_number'] %>,
+            "circuit_id": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "entity_number": 2,
+    "name": "decider-combinator",
+    "position": {
+      "x": <%= stop['position']['x'] - 2.5 %>,
+      "y": <%= stop['position']['y'] %>
+    },
+    "direction": 4,
+    "control_behavior": {
+      "decider_conditions": {
+        "first_signal": {
+          "type": "item",
+          "name": "<%= item_name %>"
+        },
+        "constant": 0,
+        "comparator": ">",
+        "output_signal": {
+          "type": "virtual",
+          "name": "signal-M"
+        },
+        "copy_count_from_input": false
+      }
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": 4004
+          }
+        ]
+      },
+      "2": {
+        "green": [
+          {
+            "entity_id": 4001,
+            "circuit_id": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "entity_number": 4004,
+    "name": "medium-electric-pole",
+    "position": {
+      "x": <%= stop['position']['x'] + 4.5 %>,
+      "y": <%= stop['position']['y'] + 2.5 %>
+    },
+    "connections": {
+      "1": {
+        "green": [
+          {
+            "entity_id": 4002,
+            "circuit_id": 1
+          }
+        ]
+      }
+    }
+  }
+]

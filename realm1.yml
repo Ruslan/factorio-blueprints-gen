@@ -1,0 +1,11 @@
+items:
+  se-beryllium-ingot:
+    stack_size: 100
+  stone:
+    stack_size: 50
+  coal:
+    stack_size: 50
+  copper-ore:
+    stack_size: 50
+  se-iron-ingot:
+    stack_size: 50

@@ -1,5 +1,6 @@
 class StationProvider < BlueprintGenerator
-  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack')
+  # Priority: 1 = take first, -1 = take last, 0 = no control
+  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0)
     super()
 
     @belts_type = belts_type
@@ -11,6 +12,7 @@ class StationProvider < BlueprintGenerator
     @train_capacity = item.train_capacity
     @trains_store = item.trains_store
 
+    @priority = priority
     @train_limit = train_limit
   end
 
@@ -22,6 +24,7 @@ class StationProvider < BlueprintGenerator
     setup_base
     setup_combinator
     setup_stop
+    setup_priority
   end
 
   def setup_belts
@@ -73,6 +76,33 @@ class StationProvider < BlueprintGenerator
       stop['station'] = "[item=#{@item_name}][item=logistic-chest-passive-provider]"
       stop
     end
+  end
+
+  def setup_priority
+    return unless @priority.abs > 0
+
+    stop = @result[:entities].find { |e| e['name'] == 'train-stop' }
+    return unless stop
+
+    case @priority
+    when 1
+      lowest_pole = @result[:entities].select { |e| e['name'] == 'medium-electric-pole' }.sort_by { |e| e['position']['y'] }.last
+      return unless lowest_pole
+
+      limit = train_items_count
+
+      json = ERB.new(File.read('templates/_station_priority_1.json.erb')).result(binding)
+    when -1
+      decider = @result[:entities].select { |e| e['name'] == 'decider-combinator' && e.dig('control_behavior', 'decider_conditions', 'first_signal', 'name') == 'signal-D' && e.dig('control_behavior', 'decider_conditions', 'second_signal', 'name') == 'signal-M' && e.dig('control_behavior', 'decider_conditions', 'output_signal', 'name') == 'signal-D' }
+      return raise StandardError, "no decider: found #{decider.size}" unless decider.size == 1
+
+      decider = decider.first
+
+      item_name = @item_name
+
+      json = ERB.new(File.read('templates/_station_priority_-1.json.erb')).result(binding)
+    end
+    add_entities(JSON.parse(json))
   end
 
   def build_icons

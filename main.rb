@@ -11,7 +11,15 @@ require './lib/station_train.rb'
 
 require 'pry'
 
-item = Items.new("realm1.json").find("se-beryllium-ingot")
+resource = ARGV[0]
+unless resource&.size&.positive?
+  puts "usage: main.rb ITEMNAME"
+  return
+end
+
+item = Items.new("realm1.json").find(resource)
+
+puts "~~~~[#{item.name}]~~~~"
 
 gen = StationProvider.new(item)
 gen.call
