@@ -2,13 +2,10 @@ require 'erb'
 
 class BlueprintGenerator
   def initialize
-    @result = {
-      entities: [],
-      item: :blueprint,
-      version: 281479277379584
-    }
+    @template_base = JSON.parse(File.read("templates/#{template_name}.json"))['blueprint']
     @icons = []
-    @template = JSON.parse(File.read("templates/#{template_name}.json"))['blueprint']['entities']
+    @template = @template_base.delete('entities')
+    @result = @template_base.merge('entities' => [])
   end
 
   def blueprint_json
@@ -45,6 +42,6 @@ class BlueprintGenerator
   end
 
   def add_entities(list)
-    @result[:entities] += list
+    @result['entities'] += list
   end
 end

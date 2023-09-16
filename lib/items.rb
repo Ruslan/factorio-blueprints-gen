@@ -1,7 +1,7 @@
 require 'yaml'
 class Items
   def initialize(file)
-    @repo = YAML.parse(File.read(file))
+    @repo = YAML.load(File.read(file))
   end
 
   def find(item_name)
@@ -10,18 +10,18 @@ class Items
 
     item = Item.new
     item.name = key
-    values.each do |k, v|
+    value.each do |k, v|
       item.send("#{k}=", v)
     end
     item
   end
 
   def find_item_tuple(item_name)
-    return item_name, @repo['items'][item_name] if @repo['items'][item_name]
+    return [item_name, @repo['items'][item_name]] if @repo['items'][item_name]
     variants = []
     @repo['items'].each do |key, item|
       if key.include?(item_name)
-        variants << item_name
+        variants << key
       end
     end
     if variants.size > 1

@@ -17,7 +17,7 @@ unless resource&.size&.positive?
   return
 end
 
-item = Items.new("realm1.json").find(resource)
+item = Items.new("realm1.yml").find(resource)
 
 puts "~~~~[#{item.name}]~~~~"
 
