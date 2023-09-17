@@ -9,12 +9,12 @@
     "direction": 4,
     "control_behavior": {
       "arithmetic_conditions": {
-        "first_signal": {
-          "type": "virtual",
-          "name": "signal-M"
+        "first_constant": <%= extra_count_on - 1 %>,
+        "second_signal": {
+          "type": "<%= item_type %>",
+          "name": "<%= item_name %>"
         },
-        "second_constant": -20,
-        "operation": "*",
+        "operation": "-",
         "output_signal": {
           "type": "virtual",
           "name": "signal-M"
@@ -25,15 +25,15 @@
       "1": {
         "green": [
           {
-            "entity_id": 4002,
-            "circuit_id": 2
+            "entity_id": 4004,
+            "circuit_id": 1
           }
         ]
       },
       "2": {
         "green": [
           {
-            "entity_id": <%= decider['entity_number'] %>,
+            "entity_id": 4002,
             "circuit_id": 1
           }
         ]
@@ -51,11 +51,11 @@
     "control_behavior": {
       "decider_conditions": {
         "first_signal": {
-          "type": "<%= item_type %>",
-          "name": "<%= item_name %>"
+          "type": "virtual",
+          "name": "signal-each"
         },
         "constant": 0,
-        "comparator": ">",
+        "comparator": "<",
         "output_signal": {
           "type": "virtual",
           "name": "signal-M"
@@ -67,14 +67,14 @@
       "1": {
         "green": [
           {
-            "entity_id": 4004
+            "entity_id": 4001
           }
         ]
       },
       "2": {
         "green": [
           {
-            "entity_id": 4001,
+            "entity_id": <%= constant['entity_number'] %>,
             "circuit_id": 1
           }
         ]
@@ -92,7 +92,7 @@
       "1": {
         "green": [
           {
-            "entity_id": 4002,
+            "entity_id": 4001,
             "circuit_id": 1
           }
         ]

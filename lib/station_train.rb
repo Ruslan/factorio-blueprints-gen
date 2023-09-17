@@ -5,7 +5,10 @@ class StationTrain < StationProvider
   end
 
   def setup_base
-    copy_entities(names: %w(cargo-wagon locomotive))
+    copy_entities(names: %w(cargo-wagon fluid-wagon locomotive)) do |wagon|
+      wagon['name'] = 'fluid-wagon' if @item.type == 'fluid' && wagon['name'] == 'cargo-wagon'
+      wagon
+    end
   end
 
   def setup_schedule
@@ -18,6 +21,7 @@ class StationTrain < StationProvider
         type: :full
       }
     else
+      template[0]['schedule'][0]['wait_conditions'][0]['condition']['first_signal']['type'] = @item_type
       template[0]['schedule'][0]['wait_conditions'][0]['condition']['first_signal']['name'] = @item_name
       template[0]['schedule'][0]['wait_conditions'][0]['condition']['constant'] = train_items_count
     end
@@ -25,7 +29,7 @@ class StationTrain < StationProvider
   end
 
   def build_icons
-    @icons = ['[item=train-stop]', "[item=#{@item_name}]", '[item=locomotive]']
+    @icons = ['[item=train-stop]', "[#{@item_type}=#{@item_name}]", '[item=locomotive]']
   end
 
   def template_name

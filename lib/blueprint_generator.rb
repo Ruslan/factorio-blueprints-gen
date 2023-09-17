@@ -25,6 +25,7 @@ class BlueprintGenerator
   def setup_icons
     @result['icons'] = @icons.map.with_index do |item_code, index|
       type, name = item_code.gsub(/[\[\]]/, '').split('=')
+      type.gsub!('-signal', '')
       {
         'signal' => {
           'type' => type,
@@ -33,6 +34,7 @@ class BlueprintGenerator
         'index' => index + 1
       }
     end
+    @result['label'] = @icons.join('')
   end
 
   def copy_entities(names: [], &block)

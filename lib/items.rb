@@ -1,7 +1,6 @@
-require 'yaml'
 class Items
-  def initialize(file)
-    @repo = YAML.load(File.read(file))
+  def initialize(realm)
+    @items = realm.items
   end
 
   def find(item_name)
@@ -17,9 +16,9 @@ class Items
   end
 
   def find_item_tuple(item_name)
-    return [item_name, @repo['items'][item_name]] if @repo['items'][item_name]
+    return [item_name, @items[item_name]] if @items[item_name]
     variants = []
-    @repo['items'].each do |key, item|
+    @items.each do |key, item|
       if key.include?(item_name)
         variants << key
       end
@@ -31,10 +30,10 @@ class Items
       end
       index = gets.chomp
       item_name = variants[index.to_i]
-      [item_name, @repo['items'][item_name]]
+      [item_name, @items[item_name]]
     elsif variants.size == 1
       item_name = variants.first
-      [item_name, @repo['items'][item_name]]
+      [item_name, @items[item_name]]
     else
       [nil, nil]
     end

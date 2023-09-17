@@ -1,3 +1,8 @@
+globals:
+  landfill: landfill
+  train_limit: 2
+  belts_type: express
+  inserter_type: stack
 items:
   se-beryllium-ingot:
     stack_size: 100
@@ -7,6 +12,8 @@ items:
     stack_size: 50
   copper-ore:
     stack_size: 50
+  copper-plate:
+    stack_size: 100
   se-iron-ingot:
     stack_size: 50
   battery:
@@ -20,3 +27,10 @@ items:
     train_capacity: 0.125
   rocket-control-unit:
     stack_size: 10
+  rocket-fuel:
+    stack_size: 10
+  electric-engine-unit:
+    stack_size: 50
+  petroleum-gas:
+    type: fluid
+    stack_size: 25000

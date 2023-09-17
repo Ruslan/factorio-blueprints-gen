@@ -1,8 +1,6 @@
 class StationProvider < BlueprintGenerator
   # Priority: 1 = take first, -1 = take last, 0 = no control
   def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0)
-    super()
-
     @belts_type = belts_type
     @inserter_type = inserter_type
 
@@ -11,9 +9,12 @@ class StationProvider < BlueprintGenerator
     @stack_size = item.stack_size
     @train_capacity = item.train_capacity
     @trains_store = item.trains_store
+    @item_type = item.type
 
     @priority = priority
     @train_limit = train_limit
+
+    super()
   end
 
   def call
@@ -50,7 +51,7 @@ class StationProvider < BlueprintGenerator
   end
 
   def setup_base
-    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal))
+    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pipe-to-ground pump pipe))
   end
 
   def setup_combinator
@@ -73,7 +74,7 @@ class StationProvider < BlueprintGenerator
 
   def setup_stop
     copy_entities(names: %w(train-stop)) do |stop|
-      stop['station'] = "[item=#{@item_name}][item=logistic-chest-passive-provider]"
+      stop['station'] = "[#{@item_type}=#{@item_name}][item=logistic-chest-passive-provider]"
       stop
     end
   end
@@ -98,6 +99,7 @@ class StationProvider < BlueprintGenerator
 
       decider = decider.first
 
+      item_type = @item_type
       item_name = @item_name
 
       json = ERB.new(File.read('templates/_station_priority_-1.json.erb')).result(binding)
@@ -106,18 +108,35 @@ class StationProvider < BlueprintGenerator
   end
 
   def build_icons
-    @icons = ['[item=train-stop]', "[item=#{@item_name}]", '[item=logistic-chest-passive-provider]']
+    @icons = ['[item=train-stop]', "[#{@item_type}=#{@item_name}]", '[item=logistic-chest-passive-provider]']
+    @icons << "[virtual-signal=se-nav-arrow-left-down]" if @priority == -1
+    @icons << "[virtual-signal=se-nav-arrow-left-up]" if @priority == 1
   end
 
   def template_name
-    'station_provider'
+    case @item_type
+    when 'fluid'
+      'station_provider_fluid'
+    else
+      'station_provider'
+    end
   end
 
   def train_items_count
-    (@stack_size * 40 * 4 * @train_capacity).ceil
+    case @item_type
+    when 'fluid'
+      (@stack_size * 4 * @train_capacity).ceil
+    else
+      (@stack_size * 40 * 4 * @train_capacity).ceil
+    end
   end
 
   def station_items_count
-    (@stack_size * 48 * 6 * 4).ceil
+    case @item_type
+    when 'fluid'
+      @stack_size * 5
+    else
+      (@stack_size * 48 * 6 * 4).ceil
+    end
   end
 end

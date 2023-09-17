@@ -1,5 +1,10 @@
 {
   "blueprint": {
+    "snap-to-grid": {
+      "x": 2,
+      "y": 7
+    },
+    "absolute-snapping": true,
     "icons": [
       {
         "signal": {
@@ -21,8 +26,8 @@
         "entity_number": 1,
         "name": "cargo-wagon",
         "position": {
-          "x": 87,
-          "y": -1026.125
+          "x": 1,
+          "y": 2.875
         },
         "orientation": 0.5,
         "inventory": null
@@ -31,8 +36,8 @@
         "entity_number": 2,
         "name": "cargo-wagon",
         "position": {
-          "x": 87,
-          "y": -1019.125
+          "x": 1,
+          "y": 9.875
         },
         "orientation": 0.5,
         "inventory": null
@@ -41,8 +46,8 @@
         "entity_number": 3,
         "name": "cargo-wagon",
         "position": {
-          "x": 87,
-          "y": -1012.125
+          "x": 1,
+          "y": 16.875
         },
         "orientation": 0.5,
         "inventory": null
@@ -51,8 +56,8 @@
         "entity_number": 4,
         "name": "cargo-wagon",
         "position": {
-          "x": 87,
-          "y": -1005.125
+          "x": 1,
+          "y": 23.875
         },
         "orientation": 0.5,
         "inventory": null
@@ -61,8 +66,8 @@
         "entity_number": 5,
         "name": "locomotive",
         "position": {
-          "x": 87,
-          "y": -998.125
+          "x": 1,
+          "y": 30.875
         },
         "orientation": 0.5,
         "items": {
