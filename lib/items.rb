@@ -1,6 +1,7 @@
 class Items
   def initialize(realm)
     @items = realm.items
+    @realm = realm
   end
 
   def find(item_name)
@@ -8,6 +9,7 @@ class Items
     return unless key
 
     item = Item.new
+    item.realm = @realm
     item.name = key
     value.each do |k, v|
       item.send("#{k}=", v)

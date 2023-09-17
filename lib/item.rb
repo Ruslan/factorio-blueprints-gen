@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :name, :stack_size, :train_capacity, :trains_store, :type
+  attr_accessor :name, :stack_size, :train_capacity, :trains_store, :type, :realm
 
   def initialize
     @stack_size = 50

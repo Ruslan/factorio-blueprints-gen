@@ -46,4 +46,9 @@ class BlueprintGenerator
   def add_entities(list)
     @result['entities'] += list
   end
+
+  def add_tiles(list)
+    @result['tiles'] ||= []
+    @result['tiles'] += list
+  end
 end

@@ -1,7 +1,7 @@
-globals:
-  landfill: landfill
+settings:
+  landfill: se-space-platform-scaffold
   train_limit: 2
-  belts_type: express
+  belts_type: se-space-transport
   inserter_type: stack
 items:
   se-beryllium-ingot:

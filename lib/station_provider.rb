@@ -1,6 +1,6 @@
 class StationProvider < BlueprintGenerator
   # Priority: 1 = take first, -1 = take last, 0 = no control
-  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0)
+  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0, landfill: false)
     @belts_type = belts_type
     @inserter_type = inserter_type
 
@@ -13,6 +13,7 @@ class StationProvider < BlueprintGenerator
 
     @priority = priority
     @train_limit = train_limit
+    @landfill = landfill
 
     super()
   end
@@ -26,6 +27,7 @@ class StationProvider < BlueprintGenerator
     setup_combinator
     setup_stop
     setup_priority
+    setup_landfill if @landfill
   end
 
   def setup_belts
@@ -35,6 +37,8 @@ class StationProvider < BlueprintGenerator
         belt['name'].gsub!('express-', 'fast-')
       when 'slow'
         belt['name'].gsub!('express-', '')
+      when 'se-space-transport'
+        belt['name'].gsub!('express-', 'se-space-transport-')
       end
       belt
     end
@@ -51,7 +55,14 @@ class StationProvider < BlueprintGenerator
   end
 
   def setup_base
-    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pipe-to-ground pump pipe))
+    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pump))
+    copy_entities(names: %w(pipe pipe-to-ground)) do |pipe|
+      case @belts_type.to_s
+      when 'se-space-transport'
+        pipe['name'] = "se-space-#{pipe['name']}"
+      end
+      pipe
+    end
   end
 
   def setup_combinator
@@ -105,6 +116,37 @@ class StationProvider < BlueprintGenerator
       json = ERB.new(File.read('templates/_station_priority_-1.json.erb')).result(binding)
     end
     add_entities(JSON.parse(json))
+  end
+
+  def setup_landfill
+    landfills = []
+    landfill_name = @item.realm.setting('landfill')
+    @result['entities'].each do |e|
+      next if landfill_name =~ /^se-/ && (%w(rail-signal)).include?(e['name'])
+      width = 1
+      height = 1
+      case e['name']
+      when 'storage-tank'
+        width = 3
+        height = 3
+      when 'pump', 'arithmetic-combinator', 'decider-combinator', 'train-stop' # TODO: add rotation support for 2x1
+        width = 2
+        height = 2
+      end
+      x0 = (e['position']['x'] - (width - 1) / 2.0).floor
+      x1 = (e['position']['x'] + (width - 1) / 2.0).floor
+      y0 = (e['position']['y'] - (height - 1) / 2.0).floor
+      y1 = (e['position']['y'] + (height - 1) / 2.0).floor
+      x0.upto(x1) do |x|
+        y0.upto(y1) do |y|
+          landfills << [x, y]
+        end
+      end
+    end
+    landfills = landfills.uniq.map do |x, y|
+      { 'position' => { 'x' => x, 'y' => y }, 'name' => landfill_name }
+    end
+    add_tiles(landfills)
   end
 
   def build_icons
