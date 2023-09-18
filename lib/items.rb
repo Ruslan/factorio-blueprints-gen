@@ -20,8 +20,9 @@ class Items
   def find_item_tuple(item_name)
     return [item_name, @items[item_name]] if @items[item_name]
     variants = []
+    item_names = Regexp.new(item_name.split('%').join('.*'))
     @items.each do |key, item|
-      if key.include?(item_name)
+      if item_names.match?(key)
         variants << key
       end
     end

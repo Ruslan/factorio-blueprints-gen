@@ -29,6 +29,10 @@ OptionParser.new do |opts|
   opts.on("-l", "--landfill", "Lay landfill") do |v|
     options[:landfill] = v
   end
+
+  opts.on("--test", "Test run") do |v|
+    options[:test] = true
+  end
 end.parse!
 
 resource = ARGV[0]
@@ -55,13 +59,13 @@ bp_opts = {
 puts "~~~~[#{item.name}]~~~~"
 puts
 
-# DEBUG
-gen = StationRequester.new(item, bp_opts.merge(priority: -1))
-gen.call
-puts JSON.pretty_generate(gen.blueprint_json)
-puts gen.blueprint
-exit
-# END
+if options[:test]
+  gen = StationRequester.new(item, bp_opts.merge(priority: -1))
+  gen.call
+  puts JSON.pretty_generate(gen.blueprint_json)
+  puts gen.blueprint
+  exit
+end
 
 book = BlueprintBook.new
 

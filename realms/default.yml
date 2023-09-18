@@ -10,11 +10,15 @@ items:
     stack_size: 50
   coal:
     stack_size: 50
+  iron-ore:
+    stack_size: 50
   copper-ore:
     stack_size: 50
   copper-plate:
     stack_size: 100
   se-iron-ingot:
+    stack_size: 50
+  se-steel-ingot:
     stack_size: 50
   battery:
     stack_size: 200
@@ -34,3 +38,13 @@ items:
   petroleum-gas:
     type: fluid
     stack_size: 25000
+  light-oil:
+    type: fluid
+    stack_size: 25000
+  se-liquid-rocket-fuel:
+    type: fluid
+    stack_size: 25000
+  solid-fuel:
+    stack_size: 50
+  se-core-fragment-iron-ore:
+    stack_size: 20
