@@ -1,7 +1,8 @@
 require 'yaml'
 class Realm
-  def initialize(file)
+  def initialize(file, default_realm = nil)
     @repo = YAML.load(File.read(file))
+    @default_realm = default_realm
   end
 
   def settings
@@ -9,7 +10,11 @@ class Realm
   end
 
   def items
-    repo['items']
+    if @default_realm
+      @default_realm.items.merge(repo['items'])
+    else
+      repo['items']
+    end
   end
 
   def setting(name)

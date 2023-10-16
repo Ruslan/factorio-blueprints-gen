@@ -47,7 +47,8 @@ unless realm_path
   exit
 end
 
-realm = Realm.new(realm_path)
+default_realm = Realm.new('realms/default.yml')
+realm = Realm.new(realm_path, default_realm)
 item = Items.new(realm).find(resource)
 
 bp_opts = {

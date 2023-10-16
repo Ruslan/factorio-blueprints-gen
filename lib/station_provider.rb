@@ -37,8 +37,8 @@ class StationProvider < BlueprintGenerator
         belt['name'].gsub!('express-', 'fast-')
       when 'slow'
         belt['name'].gsub!('express-', '')
-      when 'se-space-transport'
-        belt['name'].gsub!('express-', 'se-space-transport-')
+      when 'se-space'
+        belt['name'].gsub!('express-', 'se-space-')
       end
       belt
     end
@@ -129,7 +129,7 @@ class StationProvider < BlueprintGenerator
       when 'storage-tank'
         width = 3
         height = 3
-      when 'pump', 'arithmetic-combinator', 'decider-combinator', 'train-stop' # TODO: add rotation support for 2x1
+      when 'pump', 'arithmetic-combinator', 'decider-combinator', 'train-stop', /splitter/  # TODO: add rotation support for 2x1
         width = 2
         height = 2
       end

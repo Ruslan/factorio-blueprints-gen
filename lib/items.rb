@@ -31,7 +31,7 @@ class Items
       variants.each.with_index do |v, i|
         puts "\t#{i}) #{v}"
       end
-      index = gets.chomp
+      index = $stdin.gets.chomp
       item_name = variants[index.to_i]
       [item_name, @items[item_name]]
     elsif variants.size == 1

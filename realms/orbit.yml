@@ -1,7 +1,7 @@
 settings:
   landfill: se-space-platform-scaffold
   train_limit: 2
-  belts_type: se-space-transport
+  belts_type: se-space
   inserter_type: stack
 items:
   se-beryllium-ingot:
@@ -34,3 +34,11 @@ items:
   petroleum-gas:
     type: fluid
     stack_size: 25000
+  low-density-structure:
+    stack_size: 50
+  se-heat-shielding:
+    stack_size: 50
+  se-cryonite-slush:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1

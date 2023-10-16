@@ -12,11 +12,15 @@ items:
     stack_size: 50
   iron-ore:
     stack_size: 50
+  steel-plate:
+    stack_size: 100
   copper-ore:
     stack_size: 50
   copper-plate:
     stack_size: 100
   se-iron-ingot:
+    stack_size: 50
+  se-copper-ingot:
     stack_size: 50
   se-steel-ingot:
     stack_size: 50
@@ -29,22 +33,139 @@ items:
   advanced-circuit:
     stack_size: 200
     train_capacity: 0.125
+  electronic-circuit:
+    stack_size: 200
   rocket-control-unit:
     stack_size: 10
   rocket-fuel:
     stack_size: 10
   electric-engine-unit:
     stack_size: 50
+  water:
+    type: fluid
+    stack_size: 25000
+  crude-oil:
+    type: fluid
+    stack_size: 25000
+  se-pyroflux:
+    type: fluid
+    stack_size: 25000
   petroleum-gas:
     type: fluid
     stack_size: 25000
   light-oil:
     type: fluid
     stack_size: 25000
+  heavy-oil:
+    type: fluid
+    stack_size: 25000
+  lubricant:
+    type: fluid
+    stack_size: 25000
   se-liquid-rocket-fuel:
+    type: fluid
+    stack_size: 25000
+  sulfuric-acid:
     type: fluid
     stack_size: 25000
   solid-fuel:
     stack_size: 50
+  se-core-fragment-omni:
+    stack_size: 20
   se-core-fragment-iron-ore:
     stack_size: 20
+  se-core-fragment-crude-oil:
+    stack_size: 20
+  se-water-ice:
+    stack_size: 200
+  se-core-fragment-se-vulcanite:
+    stack_size: 20
+  se-core-fragment-se-cryonite:
+    stack_size: 20
+  se-vulcanite:
+    stack_size: 20
+  se-cryonite:
+    stack_size: 20
+  se-cryonite-powder:
+    stack_size: 50
+  se-cryonite-crystal:
+    stack_size: 50
+  se-cryonite-rod:
+    stack_size: 200
+    train_capacity: 0.125
+  se-cryonite-slush:
+    type: fluid
+    stack_size: 25000
+  se-vulcanite-block:
+    stack_size: 200
+    train_capacity: 0.25
+  sulfur:
+    stack_size: 50
+  sand:
+    stack_size: 200
+  se-vulcanite-enriched:
+    stack_size: 50
+  se-heat-shielding:
+    stack_size: 50
+  low-density-structure:
+    stack_size: 50
+  uranium-ore:
+    stack_size: 50
+  se-beryllium-ore:
+    stack_size: 50
+  solar-panel:
+    stack_size: 50
+  accumulator:
+    stack_size: 50
+  battery:
+    stack_size: 200
+  plastic-bar:
+    stack_size: 100
+  se-core-fragment-se-holmium-ore:
+    stack_size: 20
+  se-holmium-ore:
+    stack_size: 20
+  se-holmium-ore-crushed:
+    stack_size: 50
+  se-cryonite-ion-exchange-beads:
+    stack_size: 200
+  se-holmium-chloride:
+    stack_size: 50
+  se-holmium-powder:
+    stack_size: 50
+  se-holmium-ingot:
+    stack_size: 50
+  se-holmium-plate:
+    stack_size: 100
+  se-holmium-cable:
+    stack_size: 50
+  se-core-fragment-se-iridium-ore:
+    stack_size: 20
+  se-iridium-ore:
+    stack_size: 10
+  se-iridium-ore-crushed:
+    stack_size: 40
+  se-iridium-powder:
+    stack_size: 30
+  se-iridium-blastcake:
+    stack_size: 20
+  se-iridium-ingot:
+    stack_size: 20
+  se-vulcanite-ion-exchange-beads:
+    stack_size: 200
+  stone-brick:
+    stack_size: 100
+  processing-unit:
+    stack_size: 100
+  electric-engine-unit:
+    stack_size: 50
+  uranium-238:
+    stack_size: 100
+  uranium-235:
+    stack_size: 100
+  electric-motor:
+    stack_size: 50
+  electric-engine-unit:
+    stack_size: 50
+  concrete:
+    stack_size: 100
