@@ -17,6 +17,7 @@ class Assembler < BlueprintGenerator
     end
 
     copy_entities(names: %w(stack-inserter)) do |e|
+      e['position']['y'] += 3 if @options[:assembler] == 'se-space-manufactory'
       next e unless e['control_behavior']
 
       e['control_behavior']['circuit_condition']['first_signal']['name'] = @recipe['main_product']['name']
@@ -25,14 +26,18 @@ class Assembler < BlueprintGenerator
     end
 
     copy_entities(names: %w(logistic-chest-requester)) do |e|
-      e['request_filters'] = @recipe['ingredients'].map.with_index do |ing, i|
-        { index: i + 1, name: ing['name'], count: ing['amount'] * @options[:limit] / @options[:lr] }
+      e['request_filters'] = @recipe['ingredients'].filter_map.with_index do |ing, i|
+        if ing['type'] == 'item'
+          { index: i + 1, name: ing['name'], count: ing['amount'] * @options[:limit] / @options[:lr] }
+        end
       end
+      e['position']['y'] += 3 if @options[:assembler] == 'se-space-manufactory'
       e
     end
 
     copy_entities(names: %w(logistic-chest-storage)) do |e|
       e['request_filters'][0]['name'] = @recipe['main_product']['name']
+      e['position']['y'] += 3 if @options[:assembler] == 'se-space-manufactory'
       e
     end
   end

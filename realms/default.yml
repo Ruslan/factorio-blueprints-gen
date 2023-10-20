@@ -169,3 +169,11 @@ items:
     stack_size: 50
   concrete:
     stack_size: 100
+  empty-barrel:
+    stack_size: 10
+  iron-gear-wheel:
+    stack_size: 100
+  motor:
+    stack_size: 50
+  engine-unit:
+    stack_size: 50

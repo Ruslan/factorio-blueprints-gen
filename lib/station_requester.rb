@@ -78,4 +78,22 @@ class StationRequester < StationProvider
     end
     [train_items_count * @trains_store, max_count].min
   end
+
+  def shift_belts_for_space
+    belts = JSON.parse(File.read("templates/_se_space_requester_belts.json"))['blueprint']['entities']
+    belt_names = %w(se-space-underground-belt se-space-transport-belt se-space-splitter)
+    top_lamp = @result['entities'].select { |e| e['name'] == 'small-lamp' }.min_by { |e| e['position']['y'] }
+    belts_top_lamp = belts.select { |e| e['name'] == 'small-lamp' }.min_by { |e| e['position']['y'] }
+    dx = belts_top_lamp['position']['x'] - top_lamp['position']['x']
+    dy = belts_top_lamp['position']['y'] - top_lamp['position']['y']
+    belts.each do |belt|
+      belt['entity_number'] += 976800
+      belt['position']['x'] -= dx
+      belt['position']['y'] -= dy
+    end
+
+    @result['entities'] = @result['entities'].reject { |e| belt_names.include?(e['name']) && e['position']['y'] <= top_lamp['position']['y'] + 1 }
+
+    add_entities(belts.select { |e| belt_names.include?(e['name']) })
+  end
 end

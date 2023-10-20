@@ -42,3 +42,15 @@ items:
     type: fluid
     stack_size: 25000
     train_capacity: 0.1
+  se-space-water:
+    type: fluid
+    stack_size: 25000
+  se-chemical-gel:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-scrap:
+    stack_size: 50
+  se-space-mirror:
+    stack_size: 50
+    train_capacity: 0.1

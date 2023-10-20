@@ -4,6 +4,9 @@ class StationTrain < StationProvider
     setup_schedule
   end
 
+  def finalize_entities
+  end
+
   def setup_base
     copy_entities(names: %w(cargo-wagon fluid-wagon locomotive)) do |wagon|
       wagon['name'] = 'fluid-wagon' if @item.type == 'fluid' && wagon['name'] == 'cargo-wagon'
