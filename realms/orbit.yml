@@ -49,8 +49,131 @@ items:
     type: fluid
     stack_size: 25000
     train_capacity: 0.1
+  se-contaminated-bio-sludge:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
   se-scrap:
     stack_size: 50
+  se-contaminated-scrap:
+    stack_size: 50
   se-space-mirror:
+    stack_size: 50
+    train_capacity: 0.1
+  space-science-pack:
+    stack_size: 50
+  se-data-storage-substrate-cleaned:
+    stack_size: 100
+  se-empty-data:
+    stack_size: 50
+  se-junk-data:
+    stack_size: 50
+  se-broken-data:
+    stack_size: 50
+  se-space-coolant-hot:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-space-coolant-warm:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-contaminated-bio-sludge:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-contaminated-space-water:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  uranium-235:
+    stack_size: 100
+    train_capacity: 0.1
+  se-plasma-stream:
+    type: fluid
+    stack_size: 25000
+  se-ion-stream:
+    type: fluid
+    stack_size: 25000
+  se-radiation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-conductivity-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-electromagnetic-field-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-polarisation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-energy-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-bio-sludge:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-nutrient-gel:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-genetic-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biomechanical-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-bio-combustion-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biochemical-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biological-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-nutrient-vat:
+    stack_size: 5
+  se-bioculture:
+    stack_size: 5
+  se-specimen:
+    stack_size: 5
+  se-vitamelange-spice:
+    stack_size: 50
+  se-vitamelange-extract:
+    stack_size: 200
+  se-bioscrubber:
+    stack_size: 50
+  se-material-testing-pack:
+    stack_size: 10
+  se-hot-thermodynamics-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-compressive-strength-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-tensile-strength-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-cold-thermodynamics-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-material-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-energy-insight:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biological-insight:
+    stack_size: 50
+    train_capacity: 0.1
+  se-material-insight:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astronomic-insight:
+    stack_size: 50
+    train_capacity: 0.1
+  se-significant-data:
     stack_size: 50
     train_capacity: 0.1

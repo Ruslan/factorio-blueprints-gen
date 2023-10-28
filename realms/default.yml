@@ -78,6 +78,8 @@ items:
     stack_size: 20
   se-water-ice:
     stack_size: 200
+  se-methane-ice:
+    stack_size: 200
   se-core-fragment-se-vulcanite:
     stack_size: 20
   se-core-fragment-se-cryonite:
@@ -113,6 +115,8 @@ items:
     stack_size: 50
   se-beryllium-ore:
     stack_size: 50
+  se-beryllium-plate:
+    stack_size: 200
   solar-panel:
     stack_size: 50
   accumulator:
@@ -151,6 +155,8 @@ items:
     stack_size: 20
   se-iridium-ingot:
     stack_size: 20
+  se-iridium-plate:
+    stack_size: 40
   se-vulcanite-ion-exchange-beads:
     stack_size: 200
   stone-brick:
@@ -177,3 +183,31 @@ items:
     stack_size: 50
   engine-unit:
     stack_size: 50
+  explosives:
+    stack_size: 50
+  automation-science-pack:
+    stack_size: 200
+  logistic-science-pack:
+    stack_size: 200
+  chemical-science-pack:
+    stack_size: 200
+  military-science-pack:
+    stack_size: 200
+  se-rocket-science-pack:
+    stack_size: 200
+  speed-module:
+    stack_size: 50
+  productivity-module:
+    stack_size: 50
+  effectivity-module:
+    stack_size: 50
+  electric-furnace:
+    stack_size: 50
+  se-scrap:
+    stack_size: 50
+  se-data-storage-substrate:
+    stack_size: 100
+  se-machine-learning-data:
+    stack_size: 50
+  wood:
+    stack_size: 100

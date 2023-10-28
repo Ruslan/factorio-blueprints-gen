@@ -11,10 +11,12 @@ require './lib/blueprint_book.rb'
 require './lib/station_provider.rb'
 require './lib/station_requester.rb'
 require './lib/station_train.rb'
+require './lib/landing_pad.rb'
+require './lib/rocket_silo.rb'
 
 require 'pry'
 
-options = { realm: 'default' }
+options = { realm: 'default', landing_pad: true }
 OptionParser.new do |opts|
   opts.banner = "Usage: main.rb [options]"
 
@@ -32,6 +34,10 @@ OptionParser.new do |opts|
 
   opts.on("--test", "Test run") do |v|
     options[:test] = true
+  end
+
+  opts.on("--landing-pad", "Add landing pad") do |v|
+    options[:landing_pad] = true
   end
 end.parse!
 
@@ -92,6 +98,16 @@ if options[:priorities]
   book.add_blueprint_decoded(gen.blueprint_json)
 
   gen = StationRequester.new(item, bp_opts.merge(priority: -1))
+  gen.call
+  book.add_blueprint_decoded(gen.blueprint_json)
+end
+
+if options[:landing_pad] && item.type == 'item'
+  gen = LandingPad.new(item, bp_opts)
+  gen.call
+  book.add_blueprint_decoded(gen.blueprint_json)
+
+  gen = RocketSilo.new(item, bp_opts)
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 end

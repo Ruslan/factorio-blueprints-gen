@@ -1,0 +1,606 @@
+{
+  "blueprint": {
+    "snap-to-grid": {
+      "x": 1,
+      "y": 1
+    },
+    "absolute-snapping": true,
+    "icons": [
+      {
+        "signal": {
+          "type": "item",
+          "name": "se-rocket-landing-pad"
+        },
+        "index": 1
+      }
+    ],
+    "entities": [
+      {
+        "entity_number": 1,
+        "name": "substation",
+        "position": {
+          "x": 6,
+          "y": 2
+        },
+        "neighbours": [
+          43
+        ]
+      },
+      {
+        "entity_number": 2,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 1.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 3,
+        "name": "logistic-chest-active-provider",
+        "position": {
+          "x": 0.5,
+          "y": 3.5
+        }
+      },
+      {
+        "entity_number": 4,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 3.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 5,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 2.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 6,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 5.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 7,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 4.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 8,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 7.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 9,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 6.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 10,
+        "name": "logistic-chest-storage",
+        "position": {
+          "x": 8.5,
+          "y": 3.5
+        },
+        "request_filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "entity_number": 11,
+        "name": "se-rocket-landing-pad",
+        "position": {
+          "x": 4.5,
+          "y": 9.5
+        },
+        "tags": {
+          "name": "[img=item.rocket-fuel]"
+        }
+      },
+      {
+        "entity_number": 12,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 1.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 13,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 0.5,
+          "y": 4.5
+        },
+        "direction": 4,
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ],
+        "filter_mode": "blacklist"
+      },
+      {
+        "entity_number": 14,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 2.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 15,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 3.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 16,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 4.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 17,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 5.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 18,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 7.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 19,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 6.5,
+          "y": 4.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 20,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 8.5,
+          "y": 4.5
+        },
+        "direction": 4,
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 21,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 1.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 22,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 0.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 23,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 15.5
+        },
+        "direction": 2
+      },
+      {
+        "entity_number": 24,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 15.5
+        },
+        "direction": 2
+      },
+      {
+        "entity_number": 25,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 3.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 26,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 15.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 27,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 15.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 28,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 4.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 29,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 5.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 30,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 5.5,
+          "y": 15.5
+        },
+        "direction": 2
+      },
+      {
+        "entity_number": 31,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 15.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 32,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 6.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 33,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 7.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 34,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 7.5,
+          "y": 15.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 35,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 6.5,
+          "y": 15.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 36,
+        "name": "stack-filter-inserter",
+        "position": {
+          "x": 8.5,
+          "y": 14.5
+        },
+        "filters": [
+          {
+            "index": 1,
+            "name": "rocket-fuel"
+          }
+        ]
+      },
+      {
+        "entity_number": 37,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 8.5,
+          "y": 15.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 38,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 17.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 39,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 16.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 40,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 17.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 41,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 16.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 42,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 16.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 43,
+        "name": "substation",
+        "position": {
+          "x": 6,
+          "y": 18
+        },
+        "neighbours": [
+          1
+        ]
+      },
+      {
+        "entity_number": 44,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 5.5,
+          "y": 16.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 45,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 6.5,
+          "y": 16.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 46,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 18.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 47,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 18.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 48,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 3.5,
+          "y": 19.5
+        },
+        "direction": 4,
+        "type": "input"
+      },
+      {
+        "entity_number": 49,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 2.5,
+          "y": 19.5
+        },
+        "direction": 4,
+        "type": "input"
+      }
+    ],
+    "item": "blueprint",
+    "version": 281479277641728
+  }
+}

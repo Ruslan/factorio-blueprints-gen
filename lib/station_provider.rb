@@ -50,7 +50,7 @@ class StationProvider < BlueprintGenerator
   end
 
   def setup_inserters
-    copy_entities(names: %w(stack-inserter)) do |inserter|
+    copy_entities(names: %w(inserter stack-inserter stack-filter-inserter)) do |inserter|
       case @inserter_type
       when 'fast'
         belt['name'].gsub!('stack-', 'fast-')
@@ -60,7 +60,7 @@ class StationProvider < BlueprintGenerator
   end
 
   def setup_base
-    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pump))
+    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pump substation logistic-chest-storage logistic-chest-active-provider logistic-chest-requester))
     copy_entities(names: %w(pipe pipe-to-ground)) do |pipe|
       case @belts_type.to_s
       when 'se-space-transport'
@@ -134,9 +134,12 @@ class StationProvider < BlueprintGenerator
       when 'storage-tank'
         width = 3
         height = 3
-      when 'pump', 'arithmetic-combinator', 'decider-combinator', 'train-stop', /splitter/  # TODO: add rotation support for 2x1
+      when 'substation', 'pump', 'arithmetic-combinator', 'decider-combinator', 'train-stop', /splitter/  # TODO: add rotation support for 2x1
         width = 2
         height = 2
+      when 'se-rocket-landing-pad'
+        width = 9
+        height = 9
       end
       x0 = (e['position']['x'] - (width - 1) / 2.0).floor
       x1 = (e['position']['x'] + (width - 1) / 2.0).floor
