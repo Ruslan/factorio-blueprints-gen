@@ -61,11 +61,19 @@ items:
     stack_size: 50
     train_capacity: 0.1
   space-science-pack:
-    stack_size: 50
+    stack_size: 200
+    train_capacity: 0.1
+  production-science-pack:
+    stack_size: 200
+    train_capacity: 0.1
+  utility-science-pack:
+    stack_size: 200
+    train_capacity: 0.1
   se-data-storage-substrate-cleaned:
     stack_size: 100
   se-empty-data:
     stack_size: 50
+    train_capacity: 0.2
   se-junk-data:
     stack_size: 50
   se-broken-data:
@@ -93,6 +101,9 @@ items:
     type: fluid
     stack_size: 25000
   se-ion-stream:
+    type: fluid
+    stack_size: 25000
+  se-proton-stream:
     type: fluid
     stack_size: 25000
   se-radiation-data:
@@ -124,20 +135,40 @@ items:
   se-biomechanical-data:
     stack_size: 50
     train_capacity: 0.1
+  se-biomechanical-resistance-data:
+    stack_size: 50
+    train_capacity: 0.1
   se-bio-combustion-data:
     stack_size: 50
     train_capacity: 0.1
   se-biochemical-data:
     stack_size: 50
     train_capacity: 0.1
+  se-experimental-genetic-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-bio-combustion-resistance-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biochemical-resistance-data:
+    stack_size: 50
+    train_capacity: 0.1
   se-biological-catalogue-1:
     stack_size: 50
+    train_capacity: 0.1
+  se-vitalic-acid:
+    type: fluid
+    stack_size: 25000
     train_capacity: 0.1
   se-nutrient-vat:
     stack_size: 5
   se-bioculture:
     stack_size: 5
+  se-experimental-bioculture:
+    stack_size: 5
   se-specimen:
+    stack_size: 5
+  se-experimental-specimen:
     stack_size: 5
   se-vitamelange-spice:
     stack_size: 50
@@ -159,7 +190,22 @@ items:
   se-cold-thermodynamics-data:
     stack_size: 50
     train_capacity: 0.1
+  se-impact-shielding-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-pressure-containment-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-corrosion-resistance-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-rigidity-data:
+    stack_size: 50
+    train_capacity: 0.1
   se-material-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-material-catalogue-2:
     stack_size: 50
     train_capacity: 0.1
   se-energy-insight:
@@ -176,4 +222,45 @@ items:
     train_capacity: 0.1
   se-significant-data:
     stack_size: 50
+    train_capacity: 0.1
+  se-observation-frame-blank:
+    stack_size: 200
+  se-observation-frame-uv:
+    stack_size: 200
+  se-uv-observation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-observation-frame-infrared:
+    stack_size: 200
+  se-infrared-observation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-observation-frame-visible:
+    stack_size: 200
+  se-visible-observation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astrometric-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astronomic-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astronomic-insight:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astronomic-science-pack-1:
+    stack_size: 200
+    train_capacity: 0.1
+  se-energy-science-pack-1:
+    stack_size: 200
+    train_capacity: 0.1
+  se-material-science-pack-1:
+    stack_size: 200
+    train_capacity: 0.1
+  se-material-science-pack-2:
+    stack_size: 200
+    train_capacity: 0.1
+  se-biological-science-pack-1:
+    stack_size: 200
     train_capacity: 0.1

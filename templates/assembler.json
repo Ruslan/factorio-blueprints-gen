@@ -86,7 +86,8 @@
             "name": "electronic-circuit",
             "count": 200
           }
-        ]
+        ],
+        "request_from_buffers": true
       },
       {
         "entity_number": 5,

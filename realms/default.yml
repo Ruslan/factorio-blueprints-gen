@@ -155,6 +155,8 @@ items:
     stack_size: 20
   se-iridium-ingot:
     stack_size: 20
+  se-heavy-girder:
+    stack_size: 50
   se-iridium-plate:
     stack_size: 40
   se-vulcanite-ion-exchange-beads:
@@ -211,3 +213,11 @@ items:
     stack_size: 50
   wood:
     stack_size: 100
+  se-vitamelange-bloom:
+    stack_size: 50
+  se-vitamelange:
+    stack_size: 20
+  se-aeroframe-pole:
+    stack_size: 50
+  landfill:
+    stack_size: 50
