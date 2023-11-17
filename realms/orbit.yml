@@ -82,6 +82,14 @@ items:
     type: fluid
     stack_size: 25000
     train_capacity: 0.1
+  se-space-coolant-cold:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-space-coolant-supercooled:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
   se-space-coolant-warm:
     type: fluid
     stack_size: 25000
@@ -121,6 +129,21 @@ items:
   se-energy-catalogue-1:
     stack_size: 50
     train_capacity: 0.1
+  se-energy-catalogue-2:
+    stack_size: 50
+    train_capacity: 0.1
+  se-quantum-phenomenon-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-atomic-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-subatomic-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-forcefield-data:
+    stack_size: 50
+    train_capacity: 0.1
   se-bio-sludge:
     type: fluid
     stack_size: 25000
@@ -154,6 +177,9 @@ items:
     stack_size: 50
     train_capacity: 0.1
   se-biological-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-biological-catalogue-2:
     stack_size: 50
     train_capacity: 0.1
   se-vitalic-acid:
@@ -237,13 +263,32 @@ items:
     train_capacity: 0.1
   se-observation-frame-visible:
     stack_size: 200
+  se-observation-frame-xray:
+    stack_size: 200
+  se-observation-frame-microwave:
+    stack_size: 200
   se-visible-observation-data:
     stack_size: 50
     train_capacity: 0.1
   se-astrometric-data:
     stack_size: 50
     train_capacity: 0.1
+  se-gravity-wave-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-gravitational-lensing-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-microwave-observation-data:
+    stack_size: 50
+    train_capacity: 0.1
+  se-xray-observation-data:
+    stack_size: 50
+    train_capacity: 0.1
   se-astronomic-catalogue-1:
+    stack_size: 50
+    train_capacity: 0.1
+  se-astronomic-catalogue-2:
     stack_size: 50
     train_capacity: 0.1
   se-astronomic-insight:
@@ -252,7 +297,13 @@ items:
   se-astronomic-science-pack-1:
     stack_size: 200
     train_capacity: 0.1
+  se-astronomic-science-pack-2:
+    stack_size: 200
+    train_capacity: 0.1
   se-energy-science-pack-1:
+    stack_size: 200
+    train_capacity: 0.1
+  se-energy-science-pack-2:
     stack_size: 200
     train_capacity: 0.1
   se-material-science-pack-1:
@@ -262,5 +313,8 @@ items:
     stack_size: 200
     train_capacity: 0.1
   se-biological-science-pack-1:
+    stack_size: 200
+    train_capacity: 0.1
+  se-biological-science-pack-2:
     stack_size: 200
     train_capacity: 0.1

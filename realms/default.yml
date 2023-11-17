@@ -217,7 +217,18 @@ items:
     stack_size: 50
   se-vitamelange:
     stack_size: 20
+  se-vitamelange-nugget:
+    stack_size: 50
   se-aeroframe-pole:
     stack_size: 50
   landfill:
+    stack_size: 50
+  se-vitamelange-spice:
+    stack_size: 50
+  se-vitamelange-extract:
+    stack_size: 200
+  se-methane-gas:
+    type: fluid
+    stack_size: 25000
+  se-bioscrubber:
     stack_size: 50

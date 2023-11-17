@@ -16,7 +16,7 @@ require './lib/rocket_silo.rb'
 
 require 'pry'
 
-options = { realm: 'default', landing_pad: true }
+options = { realm: 'default', landing_pad: true, landfill: true, priorities: true }
 OptionParser.new do |opts|
   opts.banner = "Usage: main.rb [options]"
 
