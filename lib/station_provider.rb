@@ -1,13 +1,13 @@
 class StationProvider < BlueprintGenerator
   # Priority: 1 = take first, -1 = take last, 0 = no control
-  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0, landfill: false)
+  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0, landfill: false, train_capacity: -1)
     @belts_type = belts_type
     @inserter_type = inserter_type
 
     @item = item
     @item_name = item.name
     @stack_size = item.stack_size
-    @train_capacity = item.train_capacity
+    @train_capacity = train_capacity == -1 ? item.train_capacity : train_capacity
     @trains_store = item.trains_store
     @item_type = item.type
 

@@ -74,6 +74,8 @@ items:
     stack_size: 20
   se-core-fragment-iron-ore:
     stack_size: 20
+  se-core-fragment-se-vitamelange:
+    stack_size: 20
   se-core-fragment-crude-oil:
     stack_size: 20
   se-water-ice:
@@ -113,6 +115,10 @@ items:
     stack_size: 50
   uranium-ore:
     stack_size: 50
+  se-core-fragment-se-beryllium-ore:
+    stack_size: 20
+  se-beryllium-sulfate:
+    stack_size: 100
   se-beryllium-ore:
     stack_size: 50
   se-beryllium-plate:
@@ -232,3 +238,15 @@ items:
     stack_size: 25000
   se-bioscrubber:
     stack_size: 50
+  se-vitalic-acid:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.1
+  se-vitalic-reagent:
+    stack_size: 50
+  se-holmium-solenoid:
+    stack_size: 50
+  se-heavy-bearing:
+    stack_size: 50
+  processed-fuel:
+    stack_size: 100

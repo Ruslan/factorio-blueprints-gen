@@ -2,6 +2,7 @@ require 'base64'
 require 'json'
 require 'zlib'
 require 'optparse'
+require 'bigdecimal'
 
 require './lib/item.rb'
 require './lib/realm.rb'
@@ -16,30 +17,37 @@ require './lib/rocket_silo.rb'
 
 require 'pry'
 
-options = { realm: 'default', landing_pad: true, landfill: true, priorities: true }
+options = { realm: 'default', landing_pad: true, landfill: true, priorities: true, train_capacity: -1 }
 OptionParser.new do |opts|
   opts.banner = "Usage: main.rb [options]"
 
-  opts.on("-p", "--priorities", "Add priorities blueprints") do |v|
-    options[:priorities] = true
+  opts.on("-p", "--priorities true", "Add priorities blueprints") do |v|
+    options[:priorities] = v != 'false'
   end
 
   opts.on("-r Realm", "--realm Realm", "Set realm") do |v|
     options[:realm] = v
   end
 
-  opts.on("-l", "--landfill", "Lay landfill") do |v|
+  opts.on("-l", "--landfill", "Add landfill") do |v|
     options[:landfill] = v
   end
 
   opts.on("--test", "Test run") do |v|
-    options[:test] = true
+    options[:test] = v != 'false'
   end
 
-  opts.on("--landing-pad", "Add landing pad") do |v|
-    options[:landing_pad] = true
+  opts.on("--landing-pad false", "Add landing pad") do |v|
+    options[:landing_pad] = v != 'false'
   end
+
+  opts.on("-c 1", "--capacity 1", "What part of train (1/C) transferred at time. Good for compact and expensive goods") do |v|
+    options[:train_capacity] = 1 / BigDecimal(v)
+  end
+
 end.parse!
+
+p options
 
 resource = ARGV[0]
 unless resource&.size&.positive?
@@ -60,7 +68,8 @@ item = Items.new(realm).find(resource)
 bp_opts = {
   belts_type: realm.setting('belts_type'),
   inserter_type: realm.setting('inserter_type'),
-  landfill: options[:landfill]
+  landfill: options[:landfill],
+  train_capacity: options[:train_capacity]
 }
 
 puts "~~~~[#{item.name}]~~~~"
