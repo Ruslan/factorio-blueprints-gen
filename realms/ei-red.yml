@@ -1,0 +1,12 @@
+settings:
+  landfill: landfill
+  train_limit: 2
+  belts_type: fast
+  inserter_type: fast
+  mod: ei
+  locomotive: ei_steam-basic-locomotive
+  fuel: solid-fuel
+  fuel_count: 50
+items:
+  iron-plate:
+    stack_size: 100

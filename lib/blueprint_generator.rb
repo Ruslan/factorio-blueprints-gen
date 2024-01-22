@@ -2,7 +2,12 @@ require 'erb'
 
 class BlueprintGenerator
   def initialize
-    @template_base = JSON.parse(File.read("templates/#{template_name}.json"))['blueprint']
+    filename = if @mod && File.exists?("templates/#{template_name}_#{@mod}.json")
+      "templates/#{template_name}_#{@mod}.json"
+    else
+      "templates/#{template_name}.json"
+    end
+    @template_base = JSON.parse(File.read(filename))['blueprint']
     @icons = []
     @template = @template_base.delete('entities')
     @result = @template_base.merge('entities' => [])

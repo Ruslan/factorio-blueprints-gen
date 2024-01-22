@@ -10,6 +10,10 @@ class StationTrain < StationProvider
   def setup_base
     copy_entities(names: %w(cargo-wagon fluid-wagon locomotive)) do |wagon|
       wagon['name'] = 'fluid-wagon' if @item.type == 'fluid' && wagon['name'] == 'cargo-wagon'
+      if wagon['name'] == 'locomotive'
+        wagon['name'] = @locomotive if @locomotive
+        wagon['items'] = { @fuel => @fuel_count } if @fuel && @fuel_count
+      end
       wagon
     end
   end

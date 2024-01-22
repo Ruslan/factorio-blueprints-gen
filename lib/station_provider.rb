@@ -1,6 +1,17 @@
 class StationProvider < BlueprintGenerator
   # Priority: 1 = take first, -1 = take last, 0 = no control
-  def initialize(item, train_limit: 2, belts_type: 'express', inserter_type: 'stack', priority: 0, landfill: false, train_capacity: -1)
+  def initialize(item,
+      train_limit: 2,
+      belts_type: 'express',
+      inserter_type: 'stack',
+      priority: 0,
+      landfill: false,
+      train_capacity: -1,
+      mod: nil,
+      locomotive: nil,
+      fuel: nil,
+      fuel_count: nil
+    )
     @belts_type = belts_type
     @inserter_type = inserter_type
 
@@ -17,6 +28,11 @@ class StationProvider < BlueprintGenerator
 
     @priority_low_icon = 'se-nav-arrow-left-down'
     @priority_high_icon = 'se-nav-arrow-left-up'
+
+    @mod = mod
+    @locomotive = locomotive
+    @fuel = fuel
+    @fuel_count = fuel_count
 
     super()
   end
@@ -41,7 +57,7 @@ class StationProvider < BlueprintGenerator
   end
 
   def setup_belts
-    copy_entities(names: %w(express-splitter express-transport-belt express-underground-belt)) do |belt|
+    copy_entities(names: %w(express-splitter express-transport-belt express-underground-belt ei_express-loader)) do |belt|
       case @belts_type.to_s
       when 'fast'
         belt['name'].gsub!('express-', 'fast-')
@@ -58,14 +74,14 @@ class StationProvider < BlueprintGenerator
     copy_entities(names: %w(inserter stack-inserter stack-filter-inserter)) do |inserter|
       case @inserter_type
       when 'fast'
-        belt['name'].gsub!('stack-', 'fast-')
+        inserter['name'].gsub!('stack-', 'fast-')
       end
       inserter
     end
   end
 
   def setup_base
-    copy_entities(names: %w(small-lamp steel-chest medium-electric-pole rail-signal storage-tank pump substation logistic-chest-storage logistic-chest-active-provider logistic-chest-requester))
+    copy_entities(names: %w(small-lamp steel-chest ei_2x2-container medium-electric-pole rail-signal storage-tank pump substation logistic-chest-storage logistic-chest-active-provider logistic-chest-requester))
     copy_entities(names: %w(pipe pipe-to-ground)) do |pipe|
       case @belts_type.to_s
       when 'se-space-transport'

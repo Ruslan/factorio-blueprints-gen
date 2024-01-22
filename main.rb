@@ -69,14 +69,18 @@ bp_opts = {
   belts_type: realm.setting('belts_type'),
   inserter_type: realm.setting('inserter_type'),
   landfill: options[:landfill],
-  train_capacity: options[:train_capacity]
+  train_capacity: options[:train_capacity],
+  mod: realm.setting('mod'),
+  locomotive: realm.setting('locomotive'),
+  fuel: realm.setting('fuel'),
+  fuel_count: realm.setting('fuel_count'),
 }
 
 puts "~~~~[#{item.name}]~~~~"
 puts
 
 if options[:test]
-  gen = StationRequester.new(item, bp_opts.merge(priority: -1))
+  gen = StationProvider.new(item, bp_opts.merge(priority: -1))
   gen.call
   puts JSON.pretty_generate(gen.blueprint_json)
   puts gen.blueprint

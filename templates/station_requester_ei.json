@@ -1,0 +1,1908 @@
+{
+  "blueprint": {
+    "snap-to-grid": {
+      "x": 2,
+      "y": 42
+    },
+    "absolute-snapping": true,
+    "icons": [
+      {
+        "signal": {
+          "type": "item",
+          "name": "express-transport-belt"
+        },
+        "index": 1
+      }
+    ],
+    "entities": [
+      {
+        "entity_number": 1,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 9.5
+        }
+      },
+      {
+        "entity_number": 2,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 0.5,
+          "y": 8.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 3,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 9.5
+        }
+      },
+      {
+        "entity_number": 4,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 1.5,
+          "y": 8.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 5,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 6,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 7,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 8,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 9,
+        "name": "express-splitter",
+        "position": {
+          "x": 1,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 10,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 1.5,
+          "y": 13.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 11,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 0.5,
+          "y": 13.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 12,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 14.5
+        },
+        "direction": 2
+      },
+      {
+        "entity_number": 13,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 1.5,
+          "y": 14.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 14,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 15.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 15,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 15.5
+        }
+      },
+      {
+        "entity_number": 16,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 14.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 17,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 15.5
+        }
+      },
+      {
+        "entity_number": 18,
+        "name": "express-splitter",
+        "position": {
+          "x": 2,
+          "y": 16.5
+        }
+      },
+      {
+        "entity_number": 19,
+        "name": "express-splitter",
+        "position": {
+          "x": 1,
+          "y": 17.5
+        }
+      },
+      {
+        "entity_number": 20,
+        "name": "express-underground-belt",
+        "position": {
+          "x": 0.5,
+          "y": 16.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 21,
+        "name": "express-splitter",
+        "position": {
+          "x": 0,
+          "y": 18.5
+        }
+      },
+      {
+        "entity_number": 22,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 19.5
+        }
+      },
+      {
+        "entity_number": 23,
+        "name": "express-splitter",
+        "position": {
+          "x": 2,
+          "y": 18.5
+        }
+      },
+      {
+        "entity_number": 24,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 19.5
+        }
+      },
+      {
+        "entity_number": 25,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 19.5
+        }
+      },
+      {
+        "entity_number": 26,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 19.5
+        }
+      },
+      {
+        "entity_number": 27,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 21.5
+        }
+      },
+      {
+        "entity_number": 28,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 20.5
+        }
+      },
+      {
+        "entity_number": 29,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 20.5
+        }
+      },
+      {
+        "entity_number": 30,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 21.5
+        }
+      },
+      {
+        "entity_number": 31,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 20.5
+        }
+      },
+      {
+        "entity_number": 32,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 21.5
+        }
+      },
+      {
+        "entity_number": 33,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 20.5
+        }
+      },
+      {
+        "entity_number": 34,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 21.5
+        }
+      },
+      {
+        "entity_number": 35,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 21.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 36,
+        "name": "small-lamp",
+        "position": {
+          "x": 3.5,
+          "y": 20.5
+        }
+      },
+      {
+        "entity_number": 37,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 21.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 38,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 21.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 39,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 20.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 70
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 48
+              },
+              {
+                "entity_id": 70
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          70
+        ]
+      },
+      {
+        "entity_number": 40,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 23.5
+        }
+      },
+      {
+        "entity_number": 41,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 22.5
+        }
+      },
+      {
+        "entity_number": 42,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 22.5
+        }
+      },
+      {
+        "entity_number": 43,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 23.5
+        }
+      },
+      {
+        "entity_number": 44,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 22.5
+        }
+      },
+      {
+        "entity_number": 45,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 23.5
+        }
+      },
+      {
+        "entity_number": 46,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 2.5,
+          "y": 22.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 47,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 22.5
+        },
+        "direction": 4,
+        "type": "input"
+      },
+      {
+        "entity_number": 48,
+        "name": "ei_2x2-container",
+        "position": {
+          "x": 3,
+          "y": 24
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 39
+              },
+              {
+                "entity_id": 70
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 49,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 23.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 50,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 23.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 51,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 25.5
+        }
+      },
+      {
+        "entity_number": 52,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 24.5
+        }
+      },
+      {
+        "entity_number": 53,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 24.5
+        }
+      },
+      {
+        "entity_number": 54,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 25.5
+        }
+      },
+      {
+        "entity_number": 55,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 24.5
+        }
+      },
+      {
+        "entity_number": 56,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 25.5
+        }
+      },
+      {
+        "entity_number": 57,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 25.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 58,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 24.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 59,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 24.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 60,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 27.5
+        }
+      },
+      {
+        "entity_number": 61,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 26.5
+        }
+      },
+      {
+        "entity_number": 62,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 26.5
+        }
+      },
+      {
+        "entity_number": 63,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 27.5
+        }
+      },
+      {
+        "entity_number": 64,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 26.5
+        }
+      },
+      {
+        "entity_number": 65,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 27.5
+        }
+      },
+      {
+        "entity_number": 66,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 26.5
+        }
+      },
+      {
+        "entity_number": 67,
+        "name": "small-lamp",
+        "position": {
+          "x": 3.5,
+          "y": 27.5
+        }
+      },
+      {
+        "entity_number": 68,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 26.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 69,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 26.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 70,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 27.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 39
+              },
+              {
+                "entity_id": 109
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 39
+              },
+              {
+                "entity_id": 48
+              },
+              {
+                "entity_id": 86
+              },
+              {
+                "entity_id": 109
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          39,
+          109
+        ]
+      },
+      {
+        "entity_number": 71,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 29.5
+        }
+      },
+      {
+        "entity_number": 72,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 28.5
+        }
+      },
+      {
+        "entity_number": 73,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 28.5
+        }
+      },
+      {
+        "entity_number": 74,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 28.5
+        }
+      },
+      {
+        "entity_number": 75,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 29.5
+        }
+      },
+      {
+        "entity_number": 76,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 28.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 77,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 2.5,
+          "y": 29.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 78,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 29.5
+        },
+        "direction": 4,
+        "type": "input"
+      },
+      {
+        "entity_number": 79,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 28.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 80,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 28.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 81,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 28.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 82,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 31.5
+        }
+      },
+      {
+        "entity_number": 83,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 30.5
+        }
+      },
+      {
+        "entity_number": 84,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 30.5
+        }
+      },
+      {
+        "entity_number": 85,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 31.5
+        }
+      },
+      {
+        "entity_number": 86,
+        "name": "ei_2x2-container",
+        "position": {
+          "x": 3,
+          "y": 31
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 70
+              },
+              {
+                "entity_id": 109
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 87,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 31.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 88,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 31.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 89,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 30.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 90,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 30.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 91,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 33.5
+        }
+      },
+      {
+        "entity_number": 92,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 32.5
+        }
+      },
+      {
+        "entity_number": 93,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 32.5
+        }
+      },
+      {
+        "entity_number": 94,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 33.5
+        }
+      },
+      {
+        "entity_number": 95,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 33.5
+        }
+      },
+      {
+        "entity_number": 96,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 32.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 97,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 33.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 98,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 33.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 99,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 35.5
+        }
+      },
+      {
+        "entity_number": 100,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 34.5
+        }
+      },
+      {
+        "entity_number": 101,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 34.5
+        }
+      },
+      {
+        "entity_number": 102,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 35.5
+        }
+      },
+      {
+        "entity_number": 103,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 35.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 104,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 35.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 105,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 35.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 106,
+        "name": "small-lamp",
+        "position": {
+          "x": 3.5,
+          "y": 34.5
+        }
+      },
+      {
+        "entity_number": 107,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 35.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 108,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 35.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 109,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 34.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 70
+              },
+              {
+                "entity_id": 128
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 70
+              },
+              {
+                "entity_id": 86
+              },
+              {
+                "entity_id": 114
+              },
+              {
+                "entity_id": 128
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          70,
+          128
+        ]
+      },
+      {
+        "entity_number": 110,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 37.5
+        }
+      },
+      {
+        "entity_number": 111,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 36.5
+        }
+      },
+      {
+        "entity_number": 112,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 2.5,
+          "y": 36.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 113,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 36.5
+        },
+        "direction": 4,
+        "type": "input"
+      },
+      {
+        "entity_number": 114,
+        "name": "ei_2x2-container",
+        "position": {
+          "x": 3,
+          "y": 38
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 109
+              },
+              {
+                "entity_id": 128
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 115,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 37.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 116,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 37.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 117,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 39.5
+        }
+      },
+      {
+        "entity_number": 118,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 38.5
+        }
+      },
+      {
+        "entity_number": 119,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 39.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 120,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 38.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 121,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 38.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 122,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 41.5
+        }
+      },
+      {
+        "entity_number": 123,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 40.5
+        }
+      },
+      {
+        "entity_number": 124,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 40.5
+        }
+      },
+      {
+        "entity_number": 125,
+        "name": "small-lamp",
+        "position": {
+          "x": 3.5,
+          "y": 41.5
+        }
+      },
+      {
+        "entity_number": 126,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 40.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 127,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 40.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 128,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 41.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 109
+              },
+              {
+                "entity_id": 151
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 109
+              },
+              {
+                "entity_id": 114
+              },
+              {
+                "entity_id": 138
+              },
+              {
+                "entity_id": 151
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          109,
+          151
+        ]
+      },
+      {
+        "entity_number": 129,
+        "name": "express-transport-belt",
+        "position": {
+          "x": -0.5,
+          "y": 42.5
+        }
+      },
+      {
+        "entity_number": 130,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 0.5,
+          "y": 42.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 131,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 1.5,
+          "y": 42.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 132,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 2.5,
+          "y": 42.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 133,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 2.5,
+          "y": 43.5
+        },
+        "type": "output"
+      },
+      {
+        "entity_number": 134,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 42.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 135,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 43.5
+        },
+        "direction": 4,
+        "type": "input"
+      },
+      {
+        "entity_number": 136,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 42.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 137,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 42.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 138,
+        "name": "ei_2x2-container",
+        "position": {
+          "x": 3,
+          "y": 45
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 128
+              },
+              {
+                "entity_id": 151
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 139,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 44.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 140,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 44.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 141,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 4.5,
+          "y": 45.5
+        },
+        "direction": 6,
+        "type": "input"
+      },
+      {
+        "entity_number": 142,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 45.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 143,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 3.5,
+          "y": 46.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 144,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 3.5,
+          "y": 47.5
+        }
+      },
+      {
+        "entity_number": 145,
+        "name": "ei_express-loader",
+        "position": {
+          "x": 5.5,
+          "y": 47.5
+        },
+        "direction": 6,
+        "type": "output"
+      },
+      {
+        "entity_number": 146,
+        "name": "express-transport-belt",
+        "position": {
+          "x": 4.5,
+          "y": 47.5
+        },
+        "direction": 6
+      },
+      {
+        "entity_number": 147,
+        "name": "small-lamp",
+        "position": {
+          "x": 3.5,
+          "y": 48.5
+        }
+      },
+      {
+        "entity_number": 148,
+        "name": "arithmetic-combinator",
+        "position": {
+          "x": 3.5,
+          "y": 50
+        },
+        "control_behavior": {
+          "arithmetic_conditions": {
+            "first_constant": 40000,
+            "second_signal": {
+              "type": "virtual",
+              "name": "signal-each"
+            },
+            "operation": "-",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-each"
+            }
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 151
+              }
+            ]
+          },
+          "2": {
+            "green": [
+              {
+                "entity_id": 150,
+                "circuit_id": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 149,
+        "name": "constant-combinator",
+        "position": {
+          "x": 5.5,
+          "y": 48.5
+        },
+        "direction": 2,
+        "control_behavior": {
+          "filters": [
+            {
+              "signal": {
+                "type": "virtual",
+                "name": "signal-M"
+              },
+              "count": 2,
+              "index": 1
+            }
+          ]
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 150,
+                "circuit_id": 2
+              },
+              {
+                "entity_id": 155,
+                "circuit_id": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 150,
+        "name": "arithmetic-combinator",
+        "position": {
+          "x": 5,
+          "y": 49.5
+        },
+        "direction": 2,
+        "control_behavior": {
+          "arithmetic_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-each"
+            },
+            "second_constant": 16000,
+            "operation": "/",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-D"
+            }
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 148,
+                "circuit_id": 2
+              }
+            ]
+          },
+          "2": {
+            "green": [
+              {
+                "entity_id": 149
+              },
+              {
+                "entity_id": 154,
+                "circuit_id": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 151,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 48.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 128
+              },
+              {
+                "entity_id": 157
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 128
+              },
+              {
+                "entity_id": 148,
+                "circuit_id": 1
+              },
+              {
+                "entity_id": 138
+              },
+              {
+                "entity_id": 152,
+                "circuit_id": 1
+              },
+              {
+                "entity_id": 157
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          128,
+          157
+        ]
+      },
+      {
+        "entity_number": 152,
+        "name": "decider-combinator",
+        "position": {
+          "x": 3.5,
+          "y": 52
+        },
+        "direction": 4,
+        "control_behavior": {
+          "decider_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-everything"
+            },
+            "constant": 0,
+            "comparator": "=",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-0"
+            },
+            "copy_count_from_input": false
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 151
+              }
+            ]
+          },
+          "2": {
+            "green": [
+              {
+                "entity_id": 155,
+                "circuit_id": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 153,
+        "name": "decider-combinator",
+        "position": {
+          "x": 5,
+          "y": 51.5
+        },
+        "direction": 6,
+        "control_behavior": {
+          "decider_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-D"
+            },
+            "second_signal": {
+              "type": "virtual",
+              "name": "signal-M"
+            },
+            "comparator": ">",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-M"
+            },
+            "copy_count_from_input": true
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 154,
+                "circuit_id": 1
+              }
+            ]
+          },
+          "2": {
+            "red": [
+              {
+                "entity_id": 154,
+                "circuit_id": 2
+              },
+              {
+                "entity_id": 156,
+                "circuit_id": 1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 154,
+        "name": "decider-combinator",
+        "position": {
+          "x": 5,
+          "y": 50.5
+        },
+        "direction": 6,
+        "control_behavior": {
+          "decider_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-D"
+            },
+            "second_signal": {
+              "type": "virtual",
+              "name": "signal-M"
+            },
+            "comparator": "≤",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-D"
+            },
+            "copy_count_from_input": true
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 150,
+                "circuit_id": 2
+              },
+              {
+                "entity_id": 153,
+                "circuit_id": 1
+              }
+            ]
+          },
+          "2": {
+            "red": [
+              {
+                "entity_id": 153,
+                "circuit_id": 2
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 155,
+        "name": "arithmetic-combinator",
+        "position": {
+          "x": 4,
+          "y": 53.5
+        },
+        "direction": 2,
+        "control_behavior": {
+          "arithmetic_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-0"
+            },
+            "second_signal": {
+              "type": "virtual",
+              "name": "signal-M"
+            },
+            "operation": "*",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-L"
+            }
+          }
+        },
+        "connections": {
+          "1": {
+            "green": [
+              {
+                "entity_id": 152,
+                "circuit_id": 2
+              },
+              {
+                "entity_id": 149
+              }
+            ]
+          },
+          "2": {
+            "red": [
+              {
+                "entity_id": 158
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 156,
+        "name": "decider-combinator",
+        "position": {
+          "x": 5.5,
+          "y": 53
+        },
+        "direction": 4,
+        "control_behavior": {
+          "decider_conditions": {
+            "first_signal": {
+              "type": "virtual",
+              "name": "signal-each"
+            },
+            "constant": 0,
+            "comparator": ">",
+            "output_signal": {
+              "type": "virtual",
+              "name": "signal-L"
+            },
+            "copy_count_from_input": true
+          }
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 153,
+                "circuit_id": 2
+              }
+            ]
+          },
+          "2": {
+            "red": [
+              {
+                "entity_id": 158
+              }
+            ]
+          }
+        }
+      },
+      {
+        "entity_number": 157,
+        "name": "medium-electric-pole",
+        "position": {
+          "x": 4.5,
+          "y": 52.5
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 151
+              }
+            ],
+            "green": [
+              {
+                "entity_id": 151
+              }
+            ]
+          }
+        },
+        "neighbours": [
+          151
+        ]
+      },
+      {
+        "entity_number": 158,
+        "name": "train-stop",
+        "position": {
+          "x": 5,
+          "y": 55
+        },
+        "direction": 4,
+        "control_behavior": {
+          "train_stopped_signal": {
+            "type": "virtual",
+            "name": "signal-T"
+          },
+          "set_trains_limit": true,
+          "trains_limit_signal": {
+            "type": "virtual",
+            "name": "signal-L"
+          }
+        },
+        "connections": {
+          "1": {
+            "red": [
+              {
+                "entity_id": 156,
+                "circuit_id": 2
+              },
+              {
+                "entity_id": 155,
+                "circuit_id": 2
+              }
+            ]
+          }
+        },
+        "station": "[item=iron-plate][item=logistic-chest-requester]",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 1,
+          "a": 0.49803921580314636
+        }
+      },
+      {
+        "entity_number": 159,
+        "name": "rail-signal",
+        "position": {
+          "x": 5.5,
+          "y": 56.5
+        }
+      }
+    ],
+    "item": "blueprint",
+    "version": 281479277379584
+  }
+}
