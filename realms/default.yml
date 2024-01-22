@@ -250,3 +250,17 @@ items:
     stack_size: 50
   processed-fuel:
     stack_size: 100
+  production-science-pack:
+    stack_size: 100
+  utility-science-pack:
+    stack_size: 100
+  flying-robot-frame:
+    stack_size: 50
+  uranium-fuel-cell:
+    stack_size: 50
+  used-up-uranium-fuel-cell:
+    stack_size: 50
+  space-science-pack:
+    stack_size: 2000
+  artillery-shell:
+    stack_size: 1

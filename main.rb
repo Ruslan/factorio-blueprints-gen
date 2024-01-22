@@ -99,14 +99,26 @@ book.add_blueprint_decoded(gen.blueprint_json)
 
 if options[:priorities]
   gen = StationProvider.new(item, bp_opts.merge(priority: -1))
+  if !options[:landing_pad]
+    gen.priority_low_icon = 'signal-L'
+    gen.priority_high_icon = 'signal-H'
+  end
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 
   gen = StationProvider.new(item, bp_opts.merge(priority: 1))
+  if !options[:landing_pad]
+    gen.priority_low_icon = 'signal-L'
+    gen.priority_high_icon = 'signal-H'
+  end
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 
   gen = StationRequester.new(item, bp_opts.merge(priority: -1))
+  if !options[:landing_pad]
+    gen.priority_low_icon = 'signal-L'
+    gen.priority_high_icon = 'signal-H'
+  end
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 end

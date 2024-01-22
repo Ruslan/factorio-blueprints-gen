@@ -15,8 +15,13 @@ class StationProvider < BlueprintGenerator
     @train_limit = train_limit
     @landfill = landfill
 
+    @priority_low_icon = 'se-nav-arrow-left-down'
+    @priority_high_icon = 'se-nav-arrow-left-up'
+
     super()
   end
+
+  attr_accessor :priority_low_icon, :priority_high_icon
 
   def call
     build_icons
@@ -159,8 +164,8 @@ class StationProvider < BlueprintGenerator
 
   def build_icons
     @icons = ['[item=train-stop]', "[#{@item_type}=#{@item_name}]", '[item=logistic-chest-passive-provider]']
-    @icons << "[virtual-signal=se-nav-arrow-left-down]" if @priority == -1
-    @icons << "[virtual-signal=se-nav-arrow-left-up]" if @priority == 1
+    @icons << "[virtual-signal=#{@priority_low_icon}]" if @priority == -1
+    @icons << "[virtual-signal=#{@priority_high_icon}]" if @priority == 1
   end
 
   def template_name

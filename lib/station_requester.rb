@@ -28,8 +28,8 @@ class StationRequester < StationProvider
 
   def build_icons
     @icons = ['[item=train-stop]', "[#{@item_type}=#{@item_name}]", '[item=logistic-chest-requester]']
-    @icons << "[virtual-signal=se-nav-arrow-left-down]" if @priority == -1
-    @icons << "[virtual-signal=se-nav-arrow-left-up]" if @priority == 1
+    @icons << "[virtual-signal=#{@priority_low_icon}]" if @priority == -1
+    @icons << "[virtual-signal=#{@priority_high_icon}]" if @priority == 1
   end
 
   def setup_priority
