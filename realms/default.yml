@@ -1,8 +1,8 @@
 settings:
   landfill: landfill
   train_limit: 2
-  belts_type: express
-  inserter_type: stack
+  belts_type: fast
+  inserter_type: fast
 items:
   se-beryllium-ingot:
     stack_size: 100
@@ -195,12 +195,16 @@ items:
     stack_size: 50
   automation-science-pack:
     stack_size: 200
+    train_capacity: 0.1
   logistic-science-pack:
     stack_size: 200
+    train_capacity: 0.1
   chemical-science-pack:
     stack_size: 200
+    train_capacity: 0.1
   military-science-pack:
     stack_size: 200
+    train_capacity: 0.1
   se-rocket-science-pack:
     stack_size: 200
   speed-module:

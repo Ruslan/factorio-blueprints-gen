@@ -12,6 +12,8 @@ class BlueprintBook
     }
   end
 
+  attr_reader :result
+
   def add_blueprint_decoded(data)
     @result['blueprint_book']['blueprints'] << data.merge('index' => @result['blueprint_book']['blueprints'].size)
     @result['blueprint_book']['label'] ||= data['blueprint']['icons'][0..1].map do |icon|

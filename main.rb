@@ -80,7 +80,7 @@ puts "~~~~[#{item.name}]~~~~"
 puts
 
 if options[:test]
-  gen = StationProvider.new(item, bp_opts.merge(priority: -1))
+  gen = StationProvider.new(item, **bp_opts.merge(priority: -1))
   gen.call
   puts JSON.pretty_generate(gen.blueprint_json)
   puts gen.blueprint
@@ -89,20 +89,20 @@ end
 
 book = BlueprintBook.new
 
-gen = StationProvider.new(item, bp_opts)
+gen = StationProvider.new(item, **bp_opts)
 gen.call
 book.add_blueprint_decoded(gen.blueprint_json)
 
-gen = StationRequester.new(item, bp_opts)
+gen = StationRequester.new(item, **bp_opts)
 gen.call
 book.add_blueprint_decoded(gen.blueprint_json)
 
-gen = StationTrain.new(item, bp_opts)
+gen = StationTrain.new(item, **bp_opts)
 gen.call
 book.add_blueprint_decoded(gen.blueprint_json)
 
 if options[:priorities]
-  gen = StationProvider.new(item, bp_opts.merge(priority: -1))
+  gen = StationProvider.new(item, **bp_opts.merge(priority: -1))
   if !options[:landing_pad]
     gen.priority_low_icon = 'signal-L'
     gen.priority_high_icon = 'signal-H'
@@ -110,7 +110,7 @@ if options[:priorities]
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 
-  gen = StationProvider.new(item, bp_opts.merge(priority: 1))
+  gen = StationProvider.new(item, **bp_opts.merge(priority: 1))
   if !options[:landing_pad]
     gen.priority_low_icon = 'signal-L'
     gen.priority_high_icon = 'signal-H'
@@ -118,7 +118,7 @@ if options[:priorities]
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 
-  gen = StationRequester.new(item, bp_opts.merge(priority: -1))
+  gen = StationRequester.new(item, **bp_opts.merge(priority: -1))
   if !options[:landing_pad]
     gen.priority_low_icon = 'signal-L'
     gen.priority_high_icon = 'signal-H'
@@ -128,14 +128,17 @@ if options[:priorities]
 end
 
 if options[:landing_pad] && item.type == 'item'
-  gen = LandingPad.new(item, bp_opts)
+  gen = LandingPad.new(item, **bp_opts)
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 
-  gen = RocketSilo.new(item, bp_opts)
+  gen = RocketSilo.new(item, **bp_opts)
   gen.call
   book.add_blueprint_decoded(gen.blueprint_json)
 end
+
+book.result['blueprint_book']['label'] += " * #{bp_opts[:train_capacity]}" if bp_opts[:train_capacity] && bp_opts[:train_capacity] != -1
+book.result['blueprint_book']['label'] += " * #{item.train_capacity}" if item.train_capacity && item.train_capacity != 1
 
 result = book.blueprint
 begin

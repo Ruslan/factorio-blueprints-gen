@@ -4,9 +4,110 @@ settings:
   belts_type: fast
   inserter_type: fast
   mod: ei
-  locomotive: ei_steam-basic-locomotive
-  fuel: solid-fuel
-  fuel_count: 50
+  # locomotive: ei_steam-basic-locomotive
+  fuel: ei_diesel-fuel-unit
+  fuel_count: 30
 items:
   iron-plate:
     stack_size: 100
+  ei_coal-chunk:
+    stack_size: 100
+  ei_sulfur-chunk:
+    stack_size: 100
+  ei_acidic-water:
+    type: fluid
+    stack_size: 25000
+  ei_iron-chunk:
+    stack_size: 100
+  ei_dirty-water:
+    type: fluid
+    stack_size: 25000
+  ei_molten-iron:
+    type: fluid
+    stack_size: 25000
+  ei_iron-ingot:
+    stack_size: 100
+  ei_iron-mechanical-parts:
+    stack_size: 100
+  ei_drill-fluid:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.25
+  ei_sand:
+    stack_size: 100
+  ei_hydrogen-gas:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.5
+  ei_oxygen-gas:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.5
+  ei_nitrogen-gas:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.5
+  ei_ammonia-gas:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.5
+  ei_hydrofluoric-acid:
+    type: fluid
+    stack_size: 25000
+    train_capacity: 0.5
+  ei_copper-chunk:
+    stack_size: 100
+  ei_copper-ingot:
+    stack_size: 100
+  ei_copper-mechanical-parts:
+    stack_size: 100
+  ei_steel-ingot:
+    stack_size: 100
+  ei_fluorite:
+    stack_size: 100
+  ei_kerosene:
+    type: fluid
+    stack_size: 25000
+  ei_gold-chunk:
+    stack_size: 100
+  ei_gold-ingot:
+    stack_size: 100
+  ei_monosilicon:
+    stack_size: 100
+  ei_semiconductor:
+    stack_size: 50
+  steam:
+    type: fluid
+    stack_size: 25000
+  ei_insulated-wire:
+    stack_size: 100
+  ei_pythogas:
+    type: fluid
+    stack_size: 25000
+  ei_cryoflux:
+    type: fluid
+    stack_size: 25000
+  ei_nitric-acid:
+    type: fluid
+    stack_size: 25000
+  ei_lithium-crystal:
+    stack_size: 100
+  ei_ceramic:
+    stack_size: 100
+  ei_energy-crystal:
+    stack_size: 100
+  ei_advanced-base-semiconductor:
+    stack_size: 50
+  ei_cpu:
+    stack_size: 50
+  ei_electronic-parts:
+    stack_size: 100
+  ei_simulation-data:
+    stack_size: 200
+  ei_alien-seed:
+    stack_size: 1
+  ei_alien-resin:
+    stack_size: 50
+  ei_molten-glass:
+    type: fluid
+    stack_size: 25000
